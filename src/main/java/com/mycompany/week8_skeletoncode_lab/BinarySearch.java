@@ -30,4 +30,22 @@ public class BinarySearch {
     //ToDo 2: Call the above method and test the algorithm  
     //        provide time and space analysis
 
+    //The time complexity O(log n)
+    //The space complexity is O(1),
+
+    public static void main(String[] args) {
+        int[] sortedArray = {1, 3, 5, 7, 8, 10, 12, 14, 16, 19};
+        int key = 1;
+        int low = 0;
+        int high = sortedArray.length-1;
+
+        int index = runBinarySearchIteratively(sortedArray, key, low, high);
+
+        if(index == Integer.MAX_VALUE)  {
+            System.out.println("Key was not found.");
+        } else {
+            System.out.println("Key was found at " + index);
+        }
+    }
+
 }
